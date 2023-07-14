@@ -22,6 +22,7 @@ optional-dependencies.dev = [
     "autopep8",
     "bandit",
     "black",
+    "ipyparallel",
     "isort",
     "jupyter",
     "jupyter_nbextensions_configurator",
