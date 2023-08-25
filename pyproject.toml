@@ -41,7 +41,12 @@ optional-dependencies.dev = [
 py-modules = []
 
 [tool.pycodestyle]
-ignore = "E402"
+ignore = "E402"  # module level import not at top of file
+max-line-length = 88
+
+[tool.isort]
+line_length = 88
+force_single_line = true
 
 [tool.black]
 line-length = 88
@@ -102,36 +107,3 @@ disable = [
     "too-few-public-methods",           # "R0903"
     "too-many-arguments",               # "R0913"
 ]
-
-[tool.pyright]
-reportGeneralTypeIssues = "none"
-reportMissingImports = false
-
-[tool.ruff]
-line-length = 88
-extend-select = [
-    "BLE",
-    "C4",
-    "D",
-    "E",
-    "ERA",
-    "I",
-    "ISC",
-    "N",
-    "NPY",
-    "PD",
-    "PGH",
-    "Q",
-    "RET",
-    "RSE",
-    "RUF",
-    "S",
-    "SIM",
-    "T20",
-    "TCH",
-    "TID",
-    "UP",
-    "YTT",
-]
-show-fixes = true
-ignore = ["D10", "D203", "D213", "ERA001", "PD901", "RET504", "RUF001", "S608", "SIM117", "T201", "TID252"]
